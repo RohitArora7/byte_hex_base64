@@ -46,11 +46,12 @@ print(binascii.a2b_base64(encoded))
 
 
 
-chr() is used for converting an Integer to a Character
-ord() is used to do the reverse, i.e, convert a Character to an Integer
+chr() is used for converting an Integer to a Character\
+ord() is used to do the reverse, i.e, convert a Character to an Integer\
 
-We can also pass Integers represented in other common bases, such as Hexadecimal format (base 16) to chr() and ord().
-In Python, we can use Hexadecimal by prefixing an integer with 0x, provided it is within the 32/64 bit range for integer values.
+We can also pass Integers represented in other common bases, such as Hexadecimal format (base 16) to chr() and ord().\
+In Python, we can use Hexadecimal by prefixing an integer with 0x, provided it is within the 32/64 bit range for integer values.\
+We pass the integer 18 in hexadecimal format to chr(), which returns a hexadecimal 0x12. We pass that to chr() and use ord() to get back our integer.
 
 ```bash
 >>> print(chr(65)) 
