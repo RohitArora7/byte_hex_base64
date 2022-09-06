@@ -24,7 +24,9 @@ JS - base64 > hex
 var hexString = Buffer.from(base64String, 'base64').toString('hex')
  
  
+
 python hex > base64 
+import base64
 b64 = base64.b64encode(bytes.fromhex(bh)).decode()
 print(b64)
 
@@ -34,6 +36,7 @@ print(s2)
 
 
 byte/binary > base64
+import binascii
 encoded = binascii.b2a_base64(byte, newline=False)
 
 base64 > byte/binary 
