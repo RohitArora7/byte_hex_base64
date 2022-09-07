@@ -67,3 +67,11 @@ We pass the integer 18 in hexadecimal format to chr(), which returns a hexadecim
 >>> print(int('\x12'))
 18
 ```
+
+[ 218, 196, 85, 62, 50 ........] 
+[ b'\x10\x07Att2\x08T\x18q\x11\x91 .........]
+[F3GZEAM4GCkBRhhBU ........] 
+
+```bash
+\x10 is is not the hex representation of decimal 218, Some error in translation of datatypes.
+```
