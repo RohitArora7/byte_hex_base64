@@ -75,3 +75,52 @@ We pass the integer 18 in hexadecimal format to chr(), which returns a hexadecim
 ```bash
 \x10 is is not the hex representation of decimal 218, Some error in translation of datatypes.
 ```
+
+
+
+
+
+161
+```bash
+print(ord('\xa1'))
+
+console.log('\xa1'.charCodeAt(0))
+```
+
+```bash
+
+number to hex
+hexString = yourNumber.toString(16);
+
+hex to number
+yourNumber = parseInt(hexString, 16)
+
+```
+
+```bash
+decimal to hex
+function buf2hex(buffer) { // buffer is an ArrayBuffer
+  // create a byte array (Uint8Array) that we can use to read the array buffer
+  const byteArray = new Uint8Array(buffer);
+  
+  // for each element, we want to get its two-digit hexadecimal representation
+  const hexParts = [];
+  for(let i = 0; i < byteArray.length; i++) {
+    // convert value to hexadecimal
+    const hex = byteArray[i].toString(16);
+    
+    // pad with zeros to length 2
+    const paddedHex = ('00' + hex).slice(-2);
+    
+    // push to array
+    hexParts.push(paddedHex);
+  }
+  
+  // join all the hex values of the elements into a single string
+  return hexParts.join('');
+}
+
+// EXAMPLE:
+const buffer = new Uint8Array([ 4, 8, 12, 16 ]).buffer;
+console.log(buf2hex(buffer)); // = 04080c10
+```
