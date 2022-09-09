@@ -96,9 +96,8 @@ hex to number
 yourNumber = parseInt(hexString, 16)
 
 ```
-
-```bash
 decimal to hex
+```bash
 function buf2hex(buffer) { // buffer is an ArrayBuffer
   // create a byte array (Uint8Array) that we can use to read the array buffer
   const byteArray = new Uint8Array(buffer);
@@ -123,4 +122,17 @@ function buf2hex(buffer) { // buffer is an ArrayBuffer
 // EXAMPLE:
 const buffer = new Uint8Array([ 4, 8, 12, 16 ]).buffer;
 console.log(buf2hex(buffer)); // = 04080c10
+```
+
+hex to decimal
+```bash
+function hexToUnsignedInt(inputStr) {
+    var hex  = inputStr.toString();
+    var Uint8Array = new Array();
+    for (var n = 0; n < hex.length; n += 2) {
+        Uint8Array.push(parseInt(hex.substr(n, 2), 16));
+    }
+    return Uint8Array;
+    }
+    console.log(hexToUnsignedInt(base));
 ```
